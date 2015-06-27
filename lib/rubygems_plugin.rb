@@ -1,3 +1,1 @@
-#!/usr/bin/env ruby
-
 require 'bundler_gemfile_license_audit'
