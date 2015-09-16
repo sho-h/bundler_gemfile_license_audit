@@ -1,6 +1,6 @@
 # BundlerGemfileLicenseAudit
 
-TODO: Write a gem description
+Audit Gemfile's license dependency violations.
 
 ## Installation
 
@@ -20,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To make bundler to use this gem as well, you need to load the rubygems_plugin before. The easiest way is to make an alias in your ~/.bashrc or so:
+
+```
+alias bundle='RUBYOPT="-rbundler_gemfile_license_audit" bundle'
+```
 
 ## Contributing
 
