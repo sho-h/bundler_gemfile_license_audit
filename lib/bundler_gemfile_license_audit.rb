@@ -29,6 +29,7 @@ module BundlerGemfileLicenseAudit
         base_spec = base_dep.to_spec
         Bundler.ui.debug("base license: #{base_spec.license.inspect}")
         Bundler.definition.dependencies.each do |dependency|
+          next if dependency == base_dep
           # do not check recursive because it is depend gem's license problem.
           dep_spec = dependency.to_spec
           Bundler.ui.debug("checking with #{dep_spec.name}(#{dep_spec.license.inspect})...")
